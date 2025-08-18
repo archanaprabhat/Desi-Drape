@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Menu from "./Menu";
 
 const Navbar = () => {
@@ -10,6 +11,18 @@ const Navbar = () => {
           <div className=' text-2xl tracking-wider'>Desī Drapē</div>
         </Link>
         <Menu />
+      </div>
+      {/* Larger Screens */}
+      <div className='hidden md:flex items-center justify-between gap-8 h-full'>
+        {/* LEFT */}
+        <div className='w-1/3'>
+          <Link href='/'>
+            <Image src='/logo.png' alt='Logo' width={24} height={24} />
+            <div className="text-2xl tracking-wider">Desī Drapē</div>
+          </Link>
+        </div>
+        {/* RIGHT */}
+        <div className='w-2/3'></div>
       </div>
     </div>
   );
